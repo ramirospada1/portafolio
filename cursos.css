@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui;
+    background-image: url(cursos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    margin: 0px;
+    width: auto;
+    min-height: 100vh;
+}
+
+
+/* CABECERA */
+
+nav {
+    background-color: rgb(250, 250, 250);
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid rgba(41,41,41,0.1);
+}
+
+.enlace {
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo {
+    margin-left: 100px;
+    transform: scale(7);
+    height: 20px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    margin-right: 15px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 7px 11px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: 0.1s;
+}
+
+/* Pagina actual y pagina con el mouse sobre ella */
+li a:hover {
+    color: black;
+    background-color: rgb(230, 230, 230);
+}
+
+li a.active {
+    color: white;
+    background-color: rgb(30, 30, 30);
+}
+
+.checkbtn {
+    display: none;
+    font-size: 30px;
+    color: rgb(100, 100, 100);
+    float: right;
+    line-height: 60px;
+    margin-right: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#check:checked ~ul {
+    left: 0;
+}
+
+#check:checked ~.checkbtn {
+    color: rgb(50, 50, 50);
+    transform: rotate(90deg) scale(1.2);
+}
+
+#check {
+    display: none;
+}
+
+/* CUERPO */
+
+#contenedor-general {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    color: black;
+    background-color: rgba(190, 190, 190, 0.6);
+    margin: auto;
+    padding: 30px;
+}
+
+#contenedor-mobile {
+    display: none;
+}
+
+#cursos-realizados {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.curso {
+    text-align: left;
+    padding-top: 10px;
+}
+
+hr {
+    max-width: 30vh;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+
+.botones {
+    /* Posicion de los botones */
+    display: flex;
+    justify-content: center;
+    padding: 16px 24px;
+    margin-right: 20px;
+
+    /* Estilo de los botones */
+    color: white;
+    background-color: rgb(0, 132, 255);
+    text-decoration: none;
+    transition: 0.2s;
+    border-radius: 2px;
+}
+
+.botones:hover {
+    background-color: rgb(0, 104, 201);
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: black;
+    height: 1vh;
+    padding: 1em 0;
+    background-color: rgb(240, 240, 240);
+    border-top: 1px solid rgba(41,41,41,0.1);
+    text-align: center;
+    margin-top: auto;
+    width: auto;
+    font-size: 12px;
+}
+
+/* Responsive design // MOBILE */
+
+@media (max-width: 890px){
+
+    /* CABECERA */
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: whitesmoke;
+        bottom: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    #check:checked ~ul {
+        bottom: -50%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 4vh 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        color: black;
+        font-size: 20px
+    }
+
+    li a.active {
+        color: white;
+        background-color: rgb(30, 30, 30);
+        transition: 0.2s;
+    }
+
+    /* CUERPO */
+    body {
+        background-image: url(cursos.jpg);
+        background-size: cover;
+        backdrop-filter: none;
+    }
+
+    #contenedor-general {
+        display: none;
+    }
+
+    #contenedor-mobile {
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+        color: black;
+        background-color: rgba(190, 190, 190, 0.7);
+        margin: auto;
+        padding: 10px;
+    }
+
+    .botones{
+        margin-right: 0px;
+        margin-top: 10px;
+        border-radius: 0px;
+    }
+
+
+}
