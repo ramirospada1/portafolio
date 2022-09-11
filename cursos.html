@@ -7,22 +7,30 @@
     <title>Ramiro Spada Portafolio</title>
     <link rel="stylesheet" href="cursos.css"/>
     <link rel="icon" href="portafolio.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <!-- Cabecera -->
-    <header>
-      <a href="index.html" id="titulo">Ramiro Spada</a>
-      <ul id="navegacion">
-        <a href="index.html" class="opciones-navegacion">Inicio</a>
-        <a href="conocimientos.html" class="opciones-navegacion">Conocimientos</a>
-        <a href="https://drive.google.com/file/d/1Y8uuak6J4jI-IwKowFw-O9cLZuMdBJBD/view?usp=sharing"  class="opciones-navegacion">Curriculum</a>
-        <a href="contacto.html" class="opciones-navegacion">Contacto</a>
-      </ul>
-    </header>
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="index.html" class="enlace">
+            <img src="logo.png" alt="Ramiro Spada" class="logo">
+        </a>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="conocimientos.html">Conocimientos</a></li>
+            <li><a href="https://drive.google.com/file/d/1mXlqNt-Bsa8GrwnHRMx-TbOVTmNrrJxD/view?usp=sharing">Curriculum</a></li>
+            <li><a href="cursos.html" class="active"">Cursos</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+    </nav>
 
     <!-- Cuerpo -->
     <div id="contenedor-general">
-        <h2>Cursos realizados</h2>
+        <h2 id="cursos-realizados">CURSOS REALIZADOS</h2>
         <div id="cursos">
             <div class="curso">
                 <b>Curso #1</b><br>
@@ -53,7 +61,7 @@
 
     <!-- Cuerpo Mobile -->
     <div id="contenedor-mobile">
-        <h2>Cursos realizados</h2>
+        <h2>CURSOS REALIZADOS</h2>
         <div id="cursos-mobile">
             <div class="curso-mobile">
                 <b>Curso #1</b><br>
