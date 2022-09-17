@@ -1,9 +1,8 @@
-
-
 body {
     display: flex;
     font-family: system-ui;
-    background-color: rgb(250, 250, 250);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1062%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(239%2c 239%2c 239%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c439.647C97.351%2c452.463%2c201.809%2c495.038%2c288.461%2c448.855C375.878%2c402.264%2c394.359%2c288.46%2c444.242%2c202.879C500.554%2c106.27%2c613.078%2c24.778%2c600.407%2c-86.325C587.764%2c-197.185%2c468.099%2c-259.633%2c383.233%2c-332.073C309.855%2c-394.707%2c232.561%2c-449.678%2c140.592%2c-478.813C47.124%2c-508.423%2c-52.071%2c-525.24%2c-146.809%2c-499.985C-242.822%2c-474.39%2c-313.842%2c-401.92%2c-389.5%2c-337.504C-478.485%2c-261.741%2c-613.088%2c-206.207%2c-628.002%2c-90.293C-642.944%2c25.843%2c-534.18%2c119.495%2c-459.949%2c210.052C-400.742%2c282.281%2c-327.02%2c337.117%2c-243.458%2c378.829C-167.07%2c416.96%2c-84.646%2c428.504%2c0%2c439.647' fill='%23e1e1e1'%3e%3c/path%3e%3cpath d='M1440 974.812C1516.671 980.476 1580.237 920.3489999999999 1643.636 876.863 1705.253 834.5989999999999 1776.458 795.625 1803.0439999999999 725.796 1829.1970000000001 657.102 1806.2060000000001 580.439 1783.051 510.677 1762.791 449.639 1719.282 403.027 1679.212 352.722 1637.279 300.078 1603.562 238.60199999999998 1542.98 209.28300000000002 1477.106 177.40300000000002 1400.614 166.44600000000003 1329.433 183.445 1256.443 200.87599999999998 1193.787 247.36200000000002 1144.949 304.337 1096.281 361.11400000000003 1052.566 429.76800000000003 1054.205 504.531 1055.779 576.3389999999999 1117.2069999999999 628.849 1153.422 690.876 1185.521 745.854 1209.599 803.331 1254.824 848.139 1309.048 901.863 1363.875 969.188 1440 974.812' fill='%23fdfdfd'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1062'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
     margin: 0px;
     width: auto;
     flex-direction: column;
@@ -202,14 +201,35 @@ footer {
     text-align: center;
     align-items: center;
     color: black;
-    height: 1vh;
+    height: 1.6vh;
     padding: 1em 0;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(230, 230, 230);
     border-top: 1px solid rgba(41,41,41,0.1);
     text-align: center;
     margin-top: auto;
     width: auto;
     font-size: 12px;
+}
+
+#texto-footer {
+    width: 100%;
+    padding: 10px;
+}
+
+#iconos-footer {
+    height: 18px;
+    width: 18px;
+    border-radius: 100px;
+    color: white;
+    background-color: rgb(20, 20, 20);
+    margin-right: 20px;
+    transition: 0.1s;
+    padding: 3px 3px;
+}
+
+#iconos-footer:hover {
+    background-color: rgb(40, 40, 40);
+    cursor: pointer;
 }
 
 /* Responsive design // MOBILE */
@@ -218,6 +238,10 @@ footer {
 
     /* CABECERA */
     
+    body {
+        background-image: none;
+    }
+
     .logo {
         margin-left: 30px;
     }
